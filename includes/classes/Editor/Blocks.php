@@ -9,6 +9,7 @@ namespace Pulsar\Editor;
 
 use Pulsar\Contracts\Bootable;
 use Pulsar\Tools\Config;
+use Pulsar\Tools\Asset;
 
 /**
  * Block handling.
@@ -30,6 +31,7 @@ class Blocks implements Bootable {
 		add_filter( 'allowed_block_types_all', [ $this, 'restrict_blocks' ], 10, 2 );
 		add_action( 'wp_default_styles', [ $this, 'remove_block_styles' ], 10 );
 		add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+		add_action( 'after_setup_theme', [ $this, 'enqueue_individual_block_styles' ] );
 	}
 
 	/**
@@ -98,6 +100,38 @@ class Blocks implements Bootable {
 
 			// Remove path and dependencies
 			$styles->add( $handle, false, [] );
+		}
+	}
+
+	/**
+	 * Enqueue individual block css files.
+	 *
+	 * @return void
+	 */
+	public function enqueue_individual_block_styles() {
+
+		$blocks_directory = get_theme_file_path( '/dist/blocks/' );
+
+		// Register all the block styles in the theme.
+		if ( file_exists( $blocks_directory ) ) {
+			$block_css_files = glob( $blocks_directory . '*.css' );
+
+			// Loop through each css file and enqueue it.
+			foreach ( $block_css_files as $block ) {
+
+				// Replace slash with hyphen for filename.
+				$slug = str_replace( '/', '-', $block );
+
+				wp_enqueue_block_style(
+					$block,
+					[
+						'handle'  => "pulsar-block-{$slug}",
+						'src'     => get_theme_file_uri( "dist/blocks/{$slug}.css" ),
+						'path'    => get_theme_file_path( "dist/blocks/{$slug}.css" ),
+						'version' => Asset::attribute( 'slug', 'version' ),
+					]
+				);
+			}
 		}
 	}
 }
