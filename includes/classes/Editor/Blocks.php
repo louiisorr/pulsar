@@ -41,31 +41,14 @@ class Blocks implements Bootable {
 
 		$blocks_directory = get_theme_file_path( '/dist/blocks/' );
 
-		// Register all the blocks in the theme
+		// Register all the blocks in the theme.
 		if ( file_exists( $blocks_directory ) ) {
 			$block_json_files = glob( $blocks_directory . '*/block.json' );
 
 			// auto register all blocks that were found.
 			foreach ( $block_json_files as $filename ) {
-
 				$block_folder = dirname( $filename );
-
-				$block_options = [];
-
-				$template_file_path = $block_folder . '/template.php';
-				if ( file_exists( $template_file_path ) ) {
-
-					// only add the render callback if the block has a file called template.php in it's directory
-					$block_options['render_callback'] = function ( $attributes, $content, $block ) use ( $block_folder ) {
-
-						// get the actual markup from the template.php file
-						ob_start();
-						include "{$block_folder}/template.php";
-						return ob_get_clean();
-					};
-				};
-
-				register_block_type( $block_folder, $block_options );
+				register_block_type( $block_folder );
 			};
 		};
 	}
