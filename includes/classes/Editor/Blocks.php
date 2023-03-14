@@ -29,6 +29,7 @@ class Blocks implements Bootable {
 		add_action( 'init', [ $this, 'register' ] );
 		add_filter( 'allowed_block_types_all', [ $this, 'restrict_blocks' ], 10, 2 );
 		add_action( 'wp_default_styles', [ $this, 'remove_block_styles' ], 10 );
+		add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 	}
 
 	/**
