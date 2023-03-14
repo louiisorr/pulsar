@@ -24,9 +24,6 @@ class Setup implements Bootable {
 		add_action( 'init', [ $this, 'menus' ] );
 		add_action( 'init', [ $this, 'image_sizes' ] );
 		add_filter( 'image_size_names_choose', [ $this, 'image_size_names' ] );
-		add_action( 'widgets_init', [ $this, 'widget_areas' ] );
-		add_action( 'wp_head', [ $this, 'javascript_detected' ], 0 );
-		add_action( 'init', [ $this, 'page_title_meta' ] );
 	}
 
 	/**
@@ -39,42 +36,8 @@ class Setup implements Bootable {
 		// Theme translations.
 		load_theme_textdomain( 'pulsar', get_parent_theme_file_path( 'languages' ) );
 
-		// Title tag support.
-		add_theme_support( 'title-tag' );
-
-		// Featured image support.
-		add_theme_support( 'post-thumbnails' );
-
-		// Selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
-
-		// Outputs HTML5 markup for core features.
-		add_theme_support(
-			'html5',
-			[
-				'script',
-				'style',
-				'comment-list',
-				'comment-form',
-				'search-form',
-				'gallery',
-				'caption',
-			]
-		);
-
-		// Add support for editor styles.
-		add_theme_support( 'editor-styles' );
-
-		// Let core handle responsive embed wrappers.
-		add_theme_support( 'responsive-embeds' );
-
 		// Disable core block patterns.
 		remove_theme_support( 'core-block-patterns' );
-
-		// by adding the `theme.json` file block templates automatically get enabled.
-		// because the template editor will need additional QA and work to get right
-		// the default is to disable this feature.
-		remove_theme_support( 'block-templates' );
 	}
 
 	/**
@@ -118,27 +81,6 @@ class Setup implements Bootable {
 	}
 
 	/**
-	 * Register widget areas.
-	 *
-	 * @return void
-	 */
-	public function widget_areas() {
-		$args = [
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget__title">',
-			'after_title'   => '</h2>',
-		];
-
-		register_sidebar(
-			[
-				'id'   => 'primary',
-				'name' => esc_html_x( 'Primary', 'sidebar', 'pulsar' ),
-			] + $args
-		);
-	}
-
-	/**
 	 * Handles JavaScript detection.
 	 *
 	 * Replaces the `no-js` class with `js` on the root `<html>` element when JavaScript is detected.
@@ -146,27 +88,6 @@ class Setup implements Bootable {
 	 * @return void
 	 */
 	public function javascript_detected() {
-
 		echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
-	}
-
-	/**
-	 * Register post meta used in the theme for showing/hiding the page title.
-	 *
-	 * @return void
-	 */
-	public function page_title_meta() {
-
-		register_post_meta(
-			'',
-			'display_post_title',
-			[
-				'show_in_rest'  => true,
-				'single'        => true,
-				'default'       => true,
-				'type'          => 'boolean',
-				'auth_callback' => '__return_true',
-			]
-		);
 	}
 }
