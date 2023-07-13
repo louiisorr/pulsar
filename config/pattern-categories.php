@@ -12,11 +12,14 @@
  */
 
 return [
-	'cards'          => 'Cards',
-	'call-to-action' => 'Call to Action',
-	'features'       => 'Features',
-	'hero'           => 'Hero',
-	'pages'          => 'Pages',
-	'posts'          => 'Posts',
-	'text'           => 'Text',
+	'cards'    => 'Cards',
+	'cta'      => 'Call to Action',
+	'features' => 'Features',
+	'hero'     => 'Hero',
+	'pages'    => 'Pages',
+	'posts'    => 'Posts',
+	'text'     => 'Text',
+	'header'   => 'Headers',
+	'footer'   => 'Footers',
+	'loop'     => 'Loops',
 ];
