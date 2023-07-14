@@ -21,7 +21,7 @@
 
 			<!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|lg"}},"layout":{"type":"grid","columnCount":3}} -->
 
-				<!-- wp:group {"tagName":"article","style":{"spacing":{"blockGap":"var:preset|spacing|sm"}},"layout":{"type":"default"}} -->
+				<!-- wp:group {"tagName":"article","style":{"spacing":{"blockGap":"var:preset|spacing|lg"}},"layout":{"type":"default"}} -->
 				<article class="wp-block-group">
 					<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9"}} /-->
 

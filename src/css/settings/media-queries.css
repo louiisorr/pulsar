@@ -1,0 +1,19 @@
+/**
+ * Min-width queries
+ */
+@custom-media --xs (width >= 480px);
+@custom-media --sm (width >= 640px);
+@custom-media --md (width >= 768px);
+@custom-media --lg (width >= 1024px);
+@custom-media --xl (width >= 1280px);
+@custom-media --2-xl (width >= 1536px);
+
+/**
+ * Max-width queries
+ */
+@custom-media --xs-down (width < 480px);
+@custom-media --sm-down (width < 640px);
+@custom-media --md-down (width < 768px);
+@custom-media --lg-down (width < 1024px);
+@custom-media --xl-down (width < 1280px);
+@custom-media --2-xl-down (width < 1536px);

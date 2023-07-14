@@ -17,7 +17,7 @@ class Blocks implements Bootable {
 
 
 	// Quick dev. toggle to re-enable all blocks while testing.
-	const ENABLE_ALL_BLOCKS = false;
+	const ENABLE_ALL_BLOCKS = true;
 
 	/**
 	 * Bootstraps the class' actions/filters.

@@ -1,9 +1,0 @@
-@use "../tools" as *;
-
-:where(a:not([class])) {
-	text-decoration: underline;
-
-	&:hover {}
-
-	&:focus-visible {}
-}

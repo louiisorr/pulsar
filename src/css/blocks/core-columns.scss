@@ -1,18 +1,11 @@
-@use "../tools" as *;
-
 .wp-block-columns {
-	// Ensure full vertical column stretch when alignment is not set.
-	// This overrides the Layout block support's default align-items
-	// setting of `center`.
 	align-items: initial !important;
 	display: flex;
 
-	// Columns should always be rows unless set to stack.
 	&:where(:not([class^="is-stacked-on"])) {
 		flex-direction: column;
 	}
 
-	// All Columns Alignment
 	&.are-vertically-aligned-top {
 		align-items: flex-start;
 	}
@@ -30,24 +23,20 @@
 	}
 
 	&:where(.is-stacked-on-sm) {
-
-		@media (--sm) {
+		@media ( --sm ) {
 			flex-direction: row;
 		}
 	}
 
-	/// The fallback stacking class.
 	&:where(.is-stacked-on-md),
 	&:where(:not([class*="is-stacked-on"])) {
-
-		@media (--md) {
+		@media ( --md ) {
 			flex-direction: row;
 		}
 	}
 
 	&:where(.is-stacked-on-lg) {
-
-		@media (--lg) {
+		@media ( --lg ) {
 			flex-direction: row;
 		}
 	}

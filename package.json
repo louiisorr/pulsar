@@ -27,6 +27,7 @@
 		"@wordpress/scripts": "^26.6",
 		"alpinejs": "^3.12",
 		"fast-glob": "^3.3.0",
+		"postcss-import": "^15.1.0",
 		"postcss-preset-env": "^9.0.0",
 		"webpack-remove-empty-scripts": "^1.0"
 	},

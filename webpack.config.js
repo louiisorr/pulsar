@@ -43,7 +43,7 @@ defaultConfig.module.rules = defaultConfig.module.rules.map((item) => {
  * @return {string[]} The entry pair of its name and the file path.
  */
 const stylesheetPathToEntry = (path) => {
-	const entryName = basename(path, '.scss');
+	const entryName = basename(path, '.css');
 
 	if (!path.startsWith('./')) {
 		path = './' + path;
@@ -53,7 +53,7 @@ const stylesheetPathToEntry = (path) => {
 };
 
 function getBlockStylesEntryPoints() {
-	const styles = glob('./src/css/blocks/*.scss');
+	const styles = glob('./src/css/blocks/*.css');
 
 	const entry = {};
 	styles.forEach((fileArg) => {
@@ -73,8 +73,8 @@ module.exports = {
 	entry: {
 		...getWebpackEntryPoints(),
 		...getBlockStylesEntryPoints(),
-		'css/app-styles': ['./src/css/app.scss'],
-		'css/editor-styles': ['./src/css/editor.scss'],
+		'css/app-styles': ['./src/css/app.css'],
+		'css/editor-styles': ['./src/css/editor.css'],
 		'js/app-scripts': ['./src/js/app.js'],
 		'js/editor-scripts': ['./src/js/editor.js'],
 	},
