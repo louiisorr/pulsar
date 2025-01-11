@@ -6,31 +6,31 @@
 			"color": {
 				"neutral": {
 					"0": "#ffffff",
-					"50": "#F5F6F7",
-					"100": "#EDEFF1",
-					"200": "#D8DCDF",
-					"300": "#B5BEC4",
-					"400": "#8D9AA3",
-					"500": "#6F7E88",
-					"600": "#5A666F",
-					"700": "#49535B",
-					"800": "#3F474D",
-					"900": "#383D42",
-					"950": "#25282C",
+					"50": "#F6F6F6",
+					"100": "#E7E7E7",
+					"200": "#D1D1D1",
+					"300": "#B0B0B0",
+					"400": "#888888",
+					"500": "#6D6D6D",
+					"600": "#5D5D5D",
+					"700": "#4F4F4F",
+					"800": "#454545",
+					"900": "#242424",
+					"950": "#0C0C0C",
 					"1000": "#000000"
 				},
 				"primary": {
-					"50": "#F4F6FB",
-					"100": "#E8ECF6",
-					"200": "#CBD8EC",
-					"300": "#9DB7DC",
-					"400": "#6890C8",
-					"500": "#4573B2",
-					"600": "#335A96",
-					"700": "#2B4879",
-					"800": "#273E65",
-					"900": "#253655",
-					"950": "#090D15"
+					"50": "#F1FCF9",
+					"100": "#D0F7EF",
+					"200": "#89E9D7",
+					"300": "#6BDDCC",
+					"400": "#3CC5B5",
+					"500": "#23A99B",
+					"600": "#19887F",
+					"700": "#186D67",
+					"800": "#185753",
+					"900": "#184945",
+					"950": "#082B2A"
 				},
 				"secondary": {
 					"50": "#F6F4FB",
@@ -61,37 +61,37 @@
 					"900": "#29491E"
 				},
         "text": {
-          "default": "var:custom|color|neutral|900",
+          "default": "var:custom|color|neutral|800",
           "primary": "var:custom|color|neutral|950",
-          "secondary": "var:custom|color|neutral|700",
-          "accent": "var:custom|color|primary|500",
+          "secondary": "var:custom|color|neutral|600",
+          "accent": "var:custom|color|primary|600",
           "invert": "var:custom|color|neutral|0",
-          "active": "var:custom|color|neutral|400",
+          "active": "var:custom|color|neutral|600",
           "inactive": "var:custom|color|neutral|400",
           "error": "var:custom|color|error|900",
           "warning": "var:custom|color|warning|900",
           "success": "var:custom|color|success|900",
-          "link": "var:custom|color|primary|500",
+          "link": "var:custom|color|primary|600",
           "link-invert": "var:custom|color|primary|200"
         },
         "surface": {
           "default": "var:custom|color|neutral|0",
-          "primary": "var:custom|color|primary|500",
-          "secondary": "var:custom|color|secondary|500",
+          "primary": "var:custom|color|primary|600",
+          "secondary": "var:custom|color|primary|100",
           "accent": "var:custom|color|primary|50",
-          "invert": "var:custom|color|neutral|1000",
-          "active": "var:custom|color|neutral|400",
-          "inactive": "var:custom|color|neutral|400",
+          "invert": "var:custom|color|neutral|950",
+          "active": "var:custom|color|neutral|50",
+          "inactive": "var:custom|color|neutral|0",
           "error": "var:custom|color|error|100",
           "warning": "var:custom|color|warning|100",
           "success": "var:custom|color|success|100"
         },
         "border": {
-          "default": "var:custom|color|neutral|500",
-          "primary": "var:custom|color|primary|500",
+          "default": "var:custom|color|neutral|200",
+          "primary": "var:custom|color|primary|600",
           "invert": "var:custom|color|neutral|0",
-          "active": "var:custom|color|secondary|500",
-          "inactive": "var:custom|color|neutral|200",
+          "active": "var:custom|color|primary|600",
+          "inactive": "var:custom|color|neutral|50",
           "error": "var:custom|color|error|500",
           "warning": "var:custom|color|warning|500",
           "success": "var:custom|color|success|500"
@@ -99,11 +99,11 @@
 			},
 			"layout": {
 				"content": "768px",
-				"wide": "1536px"
+				"wide": "1640px"
 			},
 			"spacing": {
 				"blockGap": "var:preset|spacing|lg",
-				"groupGap": "var:preset|spacing|4-xl",
+				"groupGap": "var:preset|spacing|8-xl",
         "rowGap": "var:preset|spacing|2-xl",
         "columnGap": "var:preset|spacing|2-xl",
 				"edge": "clamp(var(--wp--preset--spacing--xl), 5.3333px + 5.8333vw, var(--wp--preset--spacing--4-xl))"
@@ -117,11 +117,11 @@
 				"loose": "2"
 			},
 			"letterSpacing": {
-				"tighter": "-0.05em",
-				"tight": "-0.025em",
+				"tighter": "-0.025em",
+				"tight": "-0.015em",
 				"normal": "0em",
-				"wide": "0.025em",
-				"wider": "0.05em"
+				"wide": "0.015em",
+				"wider": "0.025em"
 			},
 			"borderRadius": {
 				"2-xs": "4px",
