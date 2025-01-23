@@ -976,6 +976,11 @@ svg {
   margin-top: var(--wp--preset--spacing--4-xl);
 }
 
+@media screen and (max-width: 680px) {
+  .hero {
+    height: 65vh;
+  }
+}
 .hero p {
   font-size: var(--wp--preset--font-size--3-xl);
   line-height: var(--wp--custom--line-height--snug);
@@ -1043,18 +1048,17 @@ svg {
   color: var(--wp--custom--color--text--accent);
 }
 
-.home-grid > *:nth-child(n+3) {
-  margin-top: calc(var(--wp--preset--spacing--6-xl) - var(--wp--preset--spacing--4-xl));
+@media screen and (min-width: 680px) {
+  .home-grid > *:nth-child(n+3) {
+    margin-top: calc(var(--wp--preset--spacing--6-xl) - var(--wp--preset--spacing--4-xl));
+  }
+  .archive-grid > *:nth-child(n+4) {
+    margin-top: calc(var(--wp--preset--spacing--6-xl) - var(--wp--preset--spacing--4-xl));
+  }
+  .archive-grid {
+    gap: var(--wp--preset--spacing--3-xl);
+  }
 }
-
-.archive-grid > *:nth-child(n+4) {
-  margin-top: calc(var(--wp--preset--spacing--6-xl) - var(--wp--preset--spacing--4-xl));
-}
-
-.archive-grid {
-  gap: var(--wp--preset--spacing--3-xl);
-}
-
 .divider {
   border-top: 2px solid var(--wp--custom--color--border--default);
 }

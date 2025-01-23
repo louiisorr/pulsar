@@ -79,6 +79,8 @@
 // apply more horizontal space between grid rows //
 
 
+@media screen and (min-width: 680px) {
+
  .home-grid  > *:nth-child(n + 3) {
      margin-top: calc(var(--wp--preset--spacing--6-xl) - var(--wp--preset--spacing--4-xl));
  }
@@ -91,3 +93,4 @@
   gap: var(--wp--preset--spacing--3-xl);
 
  }
+}

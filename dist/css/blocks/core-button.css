@@ -121,12 +121,15 @@
 }
 
 @media screen and (max-width: 680px) {
-  .wp-block-buttons {
+  .is-style-bordered {
     flex-direction: column;
+    width: 100%;
   }
-}
-@media screen and (max-width: 680px) {
-  .wp-block-button {
+  .wp-block-buttons.is-content-justification-right {
+    justify-content: center !important;
+    gap: var(--wp--preset--spacing--md);
+  }
+  .mobile-full {
     width: 100% !important;
   }
 }

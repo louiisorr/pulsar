@@ -110,10 +110,20 @@
 
 }
 
-.wp-block-buttons {
 	@media screen and (max-width: 680px) {
-		flex-direction: column;
-		width: 100%;
-		background-color: red;
+		.is-style-bordered {
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.wp-block-buttons.is-content-justification-right  {
+			justify-content: center !important;
+			gap: var(--wp--preset--spacing--md);
+		}
+
+		.mobile-full {
+			width: 100% !important;
+		}
+
 	}
-}
+

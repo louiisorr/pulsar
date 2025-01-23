@@ -11,6 +11,11 @@
     margin-top: var(--wp--preset--spacing--4-xl);
 
 
+	@media screen and (max-width: 680px) {
+        height: 65vh;
+    }
+
+
 }
 
 .hero p {
