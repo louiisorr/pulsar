@@ -113,11 +113,6 @@
 .wp-block-buttons {
 	@media screen and (max-width: 680px) {
 		flex-direction: column;
-	}
-}
-
-.wp-block-button  {
-	@media screen and (max-width: 680px)  {
-		width: 100% !important;
+		width: 100%;
 	}
 }
