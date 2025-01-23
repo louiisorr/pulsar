@@ -7,7 +7,7 @@
       "defaultSpacingSizes": false,
       "customSpacingSize": false,
 			"margin": true,
-			"padding": true,
+			"padding": false,
 			"spacingSizes": [
 				{
 					"name": "2XS (4px)",

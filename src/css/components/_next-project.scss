@@ -1,0 +1,72 @@
+.next-project {
+    position: relative;
+    padding: var(--wp--preset--spacing--2-xl);
+    border-radius: var(--wp--custom--border-radius--lg);
+    background-color: var(--wp--custom--color--surface--primary-accent);
+    cursor: pointer; /* Keeps the cursor pointer for interactivity */
+    transition: background-color 0.4s ease-in-out; /* Smoothens the hover effect */
+    margin-block-end: var(--wp--custom--spacing--group-gap) !important;
+    max-width: var(--wp--custom--layout--post);
+}
+
+.next-project::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1; /* Ensure it overlays the content */
+    background: transparent; /* Keeps it invisible but clickable */
+}
+
+.next-project a {
+    position: relative;
+    z-index: 2; /* Keeps links or buttons above the pseudo-element */
+    text-decoration: none; /* Optional: remove underline for links */
+}
+
+.next-project:hover {
+    box-shadow: 0px 10px 15px -3px rgba(137, 233, 215, 0.10), 0px 4px 6px -4px rgba(137, 233, 215, 0.10);
+}
+
+
+.next-project .subheading {
+    color: var(--wp--custom--color--text--accent);
+    font-size: var(--wp--preset--font-size--2-xl);
+    font-weight: 500;
+}
+
+.next-project h2 {
+    font-size: var(--wp--preset--font-size--6-xl);
+    margin-block-start: 0;
+}
+
+
+.next-project .wp-block-button__link {
+    margin-top: 8px;
+}
+
+.next-project .wp-block-image {
+    border-radius: var(--wp--custom--border-radius--md);
+    overflow: hidden;
+}
+
+.next-project:hover .is-style-underline .wp-block-button__link::after {
+    transform: scaleX(0); /* Mimic hover behavior */
+    transform-origin: right;
+    transition: transform 0.4s ease-out; /* Ensure the same transition */
+}
+
+.next-project:hover .is-style-underline .wp-block-button__link {
+    color: var(--wp--custom--color--text--link);
+}
+
+.wp-block-image img {
+    transition: transform 0.6s ease-out;
+}
+
+.next-project:hover .wp-block-image img {
+    transform: scale(1.03);
+}
+

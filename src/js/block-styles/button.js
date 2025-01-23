@@ -1,9 +1,20 @@
+import domReady from '@wordpress/dom-ready';
+import { unregisterBlockStyle, registerBlockStyle } from '@wordpress/blocks';
+
 /**
  * This file serves as an example of how to register and unregister block styles.
  */
-import domReady from '@wordpress/dom-ready';
-import { unregisterBlockStyle } from '@wordpress/blocks';
 
 domReady(() => {
-	unregisterBlockStyle('core/button', 'outline');
+	unregisterBlockStyle('core/button', 'outline', 'secondary');
+	
+	registerBlockStyle('core/button', {
+		name: 'underline',
+		label: 'Underline',
+	});
+	
+	registerBlockStyle('core/button', {
+		name: 'bordered',
+		label: 'Bordered',
+	});
 });

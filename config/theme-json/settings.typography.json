@@ -11,17 +11,16 @@
 				{
 					"name": "Primary",
 					"slug": "primary",
-					"fontFamily": "'Inter', sans-serif",
+					"fontFamily": "'General Sans', sans-serif",
           "fontFace": [
             {
-              "fontFamily": "Inter",
+              "fontFamily": "General Sans",
               "fontStyle": "auto",
-              "fontWeight": "100 900",
+              "fontWeight": "100 400 500 600 900",
               "fontDisplay": "swap",
 		          "fontStretch": "normal",
               "src": [
-                "file:./assets/fonts/inter/InterVariable-Italic.woff2",
-                "file:./assets/fonts/inter/InterVariable.woff2"
+                "https://fonts.cdnfonts.com/css/general-sans"
               ]
             }
           ]
@@ -62,67 +61,88 @@
 					"name": "XL",
 					"slug": "xl",
 					"size": "20px",
-					"fluid": false
+					"fluid": {
+						"min": "18px",
+						"max": "20px"
+					}
 				},
 				{
 					"name": "2XL",
 					"slug": "2-xl",
-					"size": "25px",
+					"size": "24px",
 					"fluid": {
-						"min": "23px",
-						"max": "25px"
+						"min": "22px",
+						"max": "24px"
 					}
 				},
 				{
 					"name": "3XL",
 					"slug": "3-xl",
-					"size": "30px",
+					"size": "27px",
 					"fluid": {
-						"min": "25px",
-						"max": "30px"
+						"min": "24px",
+						"max": "27px"
 					}
 				},
-        {
+				{
 					"name": "4XL",
 					"slug": "4-xl",
-					"size": "37px",
+					"size": "38px",
 					"fluid": {
-						"min": "28px",
-						"max": "37px"
+						"min": "27px",
+						"max": "38px"
 					}
 				},
-        {
+				{
 					"name": "5XL",
 					"slug": "5-xl",
-					"size": "45px",
+					"size": "40px",
 					"fluid": {
-						"min": "32px",
-						"max": "45px"
+						"min": "30px",
+						"max": "40px"
 					}
 				},
         {
 					"name": "6XL",
 					"slug": "6-xl",
-					"size": "55px",
+					"size": "45px",
 					"fluid": {
-						"min": "37px",
-						"max": "55px"
+						"min": "33px",
+						"max": "45px"
 					}
 				},
         {
 					"name": "7XL",
 					"slug": "7-xl",
-					"size": "96px",
+					"size": "55px",
 					"fluid": {
-						"min": "37px",
-						"max": "96px"
+						"min": "36px",
+						"max": "55px"
+					}
+				},
+        {
+					"name": "8XL",
+					"slug": "8-xl",
+					"size": "66px",
+					"fluid": {
+						"min": "41px",
+						"max": "66px"
+					}
+				},
+        {
+					"name": "9XL",
+					"slug": "9-xl",
+					"size": "125px",
+					"fluid": {
+						"min": "51px",
+						"max": "125px"
 					}
 				}
 			],
 			"fontStyle": false,
-			"fontWeight": false,
+			"fontWeight": true,
 			"letterSpacing": false,
-			"lineHeight": false,
+			"lineHeight": true,
 			"textColumns": true,
 			"textDecoration": false,
 			"textTransform": false

@@ -1,0 +1,62 @@
+@use "tools" as *;
+
+
+ .image-carousel {
+   border-radius: var(--wp--custom--border-radius--md);
+  overflow: hidden;
+  margin-block-start: var(--wp--preset--spacing--4-xl);
+}
+
+
+.wp-block-pulsar-carousel-slide__background-image  {
+      position: relative;
+}
+
+// Carousel arrow styling //
+
+.wp-block-pulsar-carousel .splide__arrow {
+height: 64px;
+width: 64px;
+background: rgba(12, 12, 12, 0.50);
+backdrop-filter: blur(2px);
+border-radius: 1000px;
+
+&:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease-in-out;
+    background: rgba(12, 12, 12, 0.70);
+}
+
+&:not(:hover) {
+    transform: scale(1);
+    transition: transform 0.4s ease-in-out;
+}
+
+&::before {
+    background-color: var(--wp--custom--color--surface--default);
+    height: 32px;
+    width: 32px;
+}
+}
+
+/// Arrow positioning ///
+
+.wp-block-pulsar-carousel .splide__arrow--prev {
+    margin-left: var(--wp--preset--spacing--lg);
+}
+
+.wp-block-pulsar-carousel .splide__arrow--next {
+    margin-right: var(--wp--preset--spacing--lg);
+}
+
+/// Arrow icons ///
+
+.wp-block-pulsar-carousel .splide__arrow--prev::before {
+    mask-image: url("/assets/svg/arrow-left.svg");
+}
+
+.wp-block-pulsar-carousel .splide__arrow--next::before {
+    mask-image: url("/assets/svg/arrow-right.svg");
+}
+
+

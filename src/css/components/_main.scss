@@ -2,4 +2,39 @@
 
 .site-main {
 	margin: 0;
+
+	> * {
+		margin-block-start: var(--wp--custom--spacing--group-gap);
+
+		&:first-child {
+			margin-block-start: 0;
+		}
+	}
+}
+
+
+
+.text-container {
+	border-left: 3px solid var(--wp--custom--color--border--primary);
+	padding-left: var(--wp--preset--spacing--lg);
+}
+
+.group-gap {
+	margin-block-start: var(--wp--custom--spacing--group-gap);
+}
+
+.lose-top {
+	margin-block-start: 0;
+}
+
+.add-bottom {
+	padding-bottom:  var(--wp--custom--spacing--group-gap);
+}
+
+.height-tall {
+	height: 70vh;
+}
+
+.height-default {
+	height: 50vh;
 }

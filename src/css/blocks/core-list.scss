@@ -1,0 +1,67 @@
+
+@use "tools" as *;
+
+.wp-block-list {
+	color: var(--text-color, currentcolor);
+	padding-left: var(--wp--preset--spacing--xs);
+	li {
+		margin-top: var(--wp--preset--spacing--md);
+	}
+	&:where(ol) {
+		padding-left: var(--wp--preset--spacing--sm);
+		li {
+			margin-top: var(--wp--preset--spacing--md);
+		}
+	}
+	&:where(ul) {
+		--icon-size: 12px;
+		list-style: none;
+		li {
+			break-inside: avoid;
+			color: inherit;
+			isolation: isolate;
+			padding-left: calc(var(--icon-size) + var(--wp--preset--spacing--lg));
+			position: relative;
+			&::before {
+				background-color: var(--wp--custom--color--surface--primary);
+				content: "";
+				display: block;
+				height: var(--icon-size);
+				left: 0;
+				mask-image: url("/assets/svg/radial.svg");
+				mask-repeat: no-repeat;
+				mask-size: contain;
+				position: absolute;
+			    top: 11px;
+				width: var(--icon-size);
+			}
+		}
+	}
+}
+
+.panel-header .wp-block-list li {
+    font-size: var(--wp--preset--font-size--xl);
+    color: var(--wp--custom--color--text--primary);
+    font-weight: 500;
+    padding-left: calc(var(--icon-size) + var(--wp--preset--spacing--lg));
+    margin-block-start: var(--wp--preset--spacing--sm);
+	white-space: nowrap;
+	top: 20%;
+    
+
+    &::before {
+        background-color: var(--wp--custom--color--surface--primary);
+        --icon-size: 20px;
+		top: 20%;
+    }
+}
+
+
+.wp-block-list {
+    margin-block-start:  var(--wp--preset--spacing--sm);
+}
+
+::marker {
+	font-weight: 600; /* Change the weight of the numbers */
+	color: var(--wp--custom--color--text--primary); /* Optional: Change the color of the numbers */
+  }

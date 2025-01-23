@@ -4,21 +4,28 @@
 html {
 	scroll-behavior: smooth;
 	scroll-snap-type: x mandatory;
+	height: 100%;
 }
 
 body {
 	background-color: var(--wp--custom--color--surface--default);
 	color: var(--wp--custom--color--text--default);
 	font-family: var(--wp--preset--font-family--primary);
-	font-size: var(--wp--preset--font-size--lg);
+	font-size: var(--wp--preset--font-size--xl);
 	-webkit-font-smoothing: antialiased;
 	letter-spacing: var(--wp--custom--letter-spacing--tight);
 	line-height: var(--wp--custom--line-height--normal);
+	font-weight: 500;
+	height: 100%;
 
-	@include container-sizes(sm, md, lg, xl, 2-xl);
 }
 
 /// Anything that has been anchored to should have extra scroll margin.
 :target {
 	scroll-margin-block: var(--wp--custom--spacing--group-gap);
+}
+
+
+::placeholder {
+	color: var(--wp--custom--color--text--inactive);
 }

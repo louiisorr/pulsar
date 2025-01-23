@@ -30,12 +30,94 @@
 	}
 
 	:where(.is-vertical) > & {
-		--width-gap: 0;
+		--width-gap: 100%;
 	}
 }
+
 
 .wp-element-button,
 .wp-block-button__link {
 	@include button-base;
 	@include button-style(primary);
+}
+
+
+
+.is-style-bordered { 
+	.wp-block-button__link {
+		background-color: var(--wp--custom--color--surface--default, #fff);
+		border: 2px solid var(--wp--custom--color--text--primary, #000);
+		border-radius: 999px; 
+		color: var(--wp--custom--color--text--primary, #000);
+		overflow: hidden;
+		position: relative;
+		display: inline-block;
+		transition: color 0.4s ease-out;
+		z-index: 1;
+
+		@media screen and (max-width: 680px)  {
+			width: 100% !important;
+		}
+
+		&::before {	
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: var(--wp--custom--color--text--primary, #000);
+			z-index: -1; /* Ensure background is below text */
+			transition: left 0.4s ease-out;
+		}
+
+		&:hover::before {	
+			left: 0;
+		}
+
+		&:hover {
+			color: var(--wp--custom--color--surface--default, #fff); /* Set text color on hover */
+		}
+	}
+}
+
+.is-style-underline { 
+	.wp-block-button__link {
+		padding: 0;
+		background-color: transparent;
+		color: var(--wp--custom--color--text--primary);
+		position: relative;
+
+		&::after {
+			position: absolute;
+			bottom: -12px; /* Adjust this value to offset the underline */
+			left: 0;
+			width: 100%;
+			height: 2px; /* Thickness of the underline */
+			background-color: var(--wp--custom--color--text--primary); /* Match text color */
+			transform: scaleX(1); /* Visible by default */
+			transform-origin: left;
+			transition: transform 0.3s ease;
+			content: ""; /* Add this line to fix the issue */
+		}
+
+		&:hover::after {
+			transform: scaleX(0); /* Hides underline on hover */
+			transform-origin: right;
+		}
+
+	}
+
+}
+
+.wp-block-buttons {
+	@media screen and (max-width: 680px) {
+		flex-direction: column;
+	}
+}
+
+.wp-block-button  {
+	@media screen and (max-width: 680px)  {
+		width: 100% !important;
+	}
 }

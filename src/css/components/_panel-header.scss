@@ -1,0 +1,56 @@
+.panel-header-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-block-start: var(--wp--preset--spacing--xs);
+    align-items: flex-start;
+    gap: var(--wp--preset--spacing--3-xl);
+
+}
+
+
+
+.panel-header { 
+    padding: var(--wp--preset--spacing--2-xl);
+    padding-right: var(--wp--preset--spacing--5-xl);
+    background-color: var(--wp--custom--color--surface--default);
+    border-radius: var(--wp--custom--border-radius--md);
+    box-shadow: 0px 10px 15px -3px rgba(203, 203, 203, 0.10), 0px 4px 6px -4px rgba(203, 203, 203, 0.10);
+    position: absolute; /* Allows precise positioning */
+    bottom: -15%; /* Move the block halfway out of the image */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjusts the left alignment */
+    width: 100%;
+    max-width: var(--wp--custom--layout--post);
+    box-sizing: border-box;
+
+}
+
+.panel-header-inner h1 {
+max-width: var(--wp--custom--layout--content);
+font-size: var(--wp--preset--font-size--8-xl);
+line-height: var(--wp--custom--line-height--none);
+
+}
+
+.panel-header .subheading {
+    color: var(--wp--custom--color--text--accent);
+    font-size: var(--wp--preset--font-size--3-xl);
+    font-weight: 500;
+
+}
+
+.panel-header-container {
+    position: relative; /* Enables absolute positioning for child elements */
+    display: inline-block;
+    width: 100%; /* Adjust as needed */
+}
+
+.panel-header-image {
+    height: 60vh;
+    overflow: hidden;
+}
+
+spacer {
+    height: var(--wp--custom--spacing--row-gap);
+}

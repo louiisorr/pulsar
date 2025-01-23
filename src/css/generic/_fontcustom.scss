@@ -1,0 +1,17 @@
+@use "tools" as *;
+
+.subheading {
+    line-height: var(--wp--custom--line-height--tight);
+    font-weight: 500;
+    letter-spacing: var(--wp--custom--letter-spacing--tighter);
+}
+
+
+em {
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 600;
+    color: var(--wp--custom--color--text--primary);
+}

@@ -1,0 +1,148 @@
+@use "tools" as *;
+
+
+.forminator-input {
+   border-radius: var(--wp--custom--border-radius--xs);
+   border-color: var(--wp--custom--color--border--input);
+   height: 70px;
+   padding-left: var(--wp--preset--spacing--lg);
+   font-size: var(--wp--custom--font-size--xl);
+   letter-spacing: var(--wp--custom--letter-spacing--tight);
+   line-height: var(--wp--custom--line-height--normal);
+   font-weight: 500;
+}
+
+.forminator-input::placeholder,
+.forminator-textarea::placeholder {
+    color: var(--wp--custom--color--text--inactive);
+}
+
+.forminator-input:not(:placeholder-shown),
+.forminator-textarea:not(:placeholder-shown) {
+    border-color: var(--wp--custom--color--border--active);
+}
+
+.forminator-textarea {
+    padding-left: var(--wp--preset--spacing--lg);
+    padding-top: var(--wp--preset--spacing--lg);
+    border-color: var(--wp--custom--color--border--input);
+    font-size: var(--wp--custom--font-size--2-xl);
+    letter-spacing: var(--wp--custom--letter-spacing--tight);
+    line-height: var(--wp--custom--line-height--normal);
+    font-weight: 500;
+    border-radius: var(--wp--custom--border-radius--xs);;
+}
+
+
+.form-box {
+    padding: var(--wp--preset--spacing--3-xl);
+    background-color: var(--wp--custom--color--surface--default);
+}
+
+.accent {
+background-color: var(--wp--custom--color--surface--accent);
+}
+
+
+
+
+
+.contact-container {
+        border-radius: var(--wp--custom--border-radius--lg);
+        max-width: var(--wp--custom--layout--wide);
+        width: 100%; /* Allow responsiveness */
+        overflow: hidden;
+        box-sizing: border-box; /* Prevent padding from affecting width */
+        margin-block: auto; /* Auto vertical margins for centering */
+        z-index: 2;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 10vh;
+            right: -410px;
+            transform: translateY(-50%);
+            width: 1200px;
+            height: 1200px;
+            background-image: url(/assets/svg/vector.svg); /* Replace with your phone icon image path */
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -70vh;
+            left: -410px;
+            transform: translateY(-50%);
+            width: 1200px;
+            height: 1200px;
+            background-image: url(/assets/svg/vector.svg); /* Replace with your phone icon image path */
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -2;
+            opacity: 0.5;
+        }
+      }
+  
+
+.contact-holder {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;
+    overflow: hidden;
+    position: relative; /* Add this line to make the div a positioning context */
+}
+
+.contact-holder svg {
+    position: absolute; /* Add this line to position the svgs */
+    /* Add your desired positioning properties here */
+}
+
+
+  
+
+.forminator-guttenberg {
+    width: 100% !important;
+    margin-block-start: 0;
+
+}
+
+
+.forminator-error-message {
+    background-color: transparent !important;
+    font-size: var(--wp--custom--font-size--md) !important;
+    padding-left: var(--wp--preset--spacing--xl) !important;
+    margin-block-start: var(--wp--preset--spacing--xs) !important;
+    display: inline-block !important;
+    
+    // Add the following styles for the error message text color
+    color: var(--wp--custom--color--text--error) !important;
+    font-weight: 500 !important;
+}
+
+.forminator-row {
+    margin-bottom: var(--wp--preset--spacing--sm) !important;
+}
+
+.send-form {
+	@include button-base;
+	background-color: var(--wp--custom--color--surface--invert, #fff);
+	border: 2px solid var(--wp--custom--color--text--primary, #000);
+	border-radius: 999px; 
+	color: var(--wp--custom--color--text--invert, #000);
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	transition: transform 0.4s ease-out;
+	z-index: 1;
+    margin-top: var(--wp--preset--spacing--md);
+
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

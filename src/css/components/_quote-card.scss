@@ -1,0 +1,42 @@
+@use "tools" as *; 
+
+.quote-card {
+    background-color: var(--wp--custom--color--surface--accent); 
+    border-radius: var(--wp--custom--border-radius--md); 
+    padding: var(--wp--preset--spacing--3-xl);
+    position: relative; /* Required for the ::before pseudo-element */
+    flex-grow: 1;
+}
+
+.quote-card .wp-block-group {
+    margin-block-start: 0;
+}
+
+.quote-card::before {
+
+    top: 1rem; /* Adjust to position the icon */
+    left: 1rem; /* Align with card padding */
+    width: 42px; /* Match SVG size */
+    height: 28px; /* Match SVG size */
+    content: url("/assets/svg/quote.svg");
+    display: block;
+}
+
+.quote-card p {
+    margin-block-start: var(--wp--preset--spacing--lg) !important;
+    font-size: var(--wp--preset--font-size--xl);
+    font-weight: 500;
+    line-height: var(--wp--custom--line-height--snug);
+    color: var(--wp--custom--color--text--primary);
+  
+}
+
+.quote-row {
+    display: flex;
+    flex-direction: row;
+    margin-block-start: var(--wp--preset--spacing--6-xl);
+    gap: var(--wp--preset--spacing--2-xl);
+    margin-block-end: var(--wp--preset--spacing--6-xl);
+    max-width: var(--wp--custom--layout--post);
+    align-items: start;
+}

@@ -3,11 +3,6 @@
 	"version": 3,
 	"settings": {
 		"blocks": {
-			"core/button": {
-				"color": {
-					"background": true
-				}
-			},
 			"core/column": {
 				"spacing": {
 					"units": ["%", "px", "vw"]
@@ -15,14 +10,81 @@
 			},
 			"core/group": {
 				"color": {
-					"background": true
-				}
+					"background": true,
+          "palette": [
+            {
+              "name": "Secondary",
+              "slug": "secondary",
+              "color": "var:custom|color|surface|secondary"
+            },
+            {
+              "name": "Tertiary",
+              "slug": "tertiary",
+              "color": "var:custom|color|surface|tertiary"
+            },
+            {
+              "name": "Accent",
+              "slug": "accent",
+              "color": "var:custom|color|surface|accent"
+            },
+            {
+              "name": "Neutral",
+              "slug": "neutral",
+              "color": "var:custom|color|surface|neutral"
+            },
+            {
+              "name": "Invert",
+              "slug": "invert",
+              "color": "var:custom|color|surface|invert"
+            }
+          ]
+				},
+        "position": {
+          "sticky": true
+        },
+        "spacing": {
+          "blockGap": true,
+          "margin": true,
+          "padding": true
+        }
 			},
 			"core/heading": {
 				"color": {
 					"text": true
 				}
-			}
+			},
+      "core/media-text": {
+        "color": {
+          "background": true,
+          "palette": [
+            {
+              "name": "Secondary",
+              "slug": "secondary",
+              "color": "var:custom|color|surface|secondary"
+            },
+            {
+              "name": "Tertiary",
+              "slug": "tertiary",
+              "color": "var:custom|color|surface|tertiary"
+            },
+            {
+              "name": "Accent",
+              "slug": "accent",
+              "color": "var:custom|color|surface|accent"
+            },
+            {
+              "name": "Neutral",
+              "slug": "neutral",
+              "color": "var:custom|color|surface|neutral"
+            },
+            {
+              "name": "Invert",
+              "slug": "invert",
+              "color": "var:custom|color|surface|invert"
+            }
+          ]
+        }
+      }
 		}
 	}
 }

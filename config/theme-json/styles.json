@@ -3,6 +3,11 @@
 	"version": 3,
 	"styles": {
     "elements": {
+      "link": {
+       "typography": {
+        "textDecoration": "none"
+       }
+      },
       "button": {
         "border": {
           "color": "",
@@ -14,7 +19,12 @@
           "text": ""
         },
         "spacing": {
-          "padding": {}
+          "padding": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          }
         },
         "typography": {
           "lineHeight": "",

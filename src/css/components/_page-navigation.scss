@@ -1,0 +1,89 @@
+@use "tools" as *;
+
+.page-navigation-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1 0 0;
+    padding-left: var(--wp--preset--spacing--lg);
+    padding-right: var(--wp--preset--spacing--lg);
+    height: 100%;
+    font-weight: 500;
+    color: var(--wp--custom--color--text--primary);
+    font-size: var(--wp--preset--font-size--lg);
+    cursor: pointer; /* Keeps the cursor pointer for interactivity */
+
+}
+
+.page-navigation-block a {
+    text-decoration: none;
+    color: var(--wp--custom--color--text--primary);
+}
+
+.page-navigation-block p {
+    margin-block-start: 0;
+
+}
+
+.page-navigation-block:hover {
+    background-color: var(--wp--custom--color--surface--primary-accent);
+}
+
+.page-navigation-block.active {
+    border-left: 4px solid var(--wp--custom--color--border--active);
+    padding-left: calc(var(--wp--preset--spacing--lg) - 4px);
+    background-color: var(--wp--custom--color--surface--primary-active); 
+
+}
+
+.page-navigation-block::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001; /* Ensure it overlays the content */
+    background: transparent; /* Keeps it invisible but clickable */
+}
+
+.page-navigation-block a {
+    position: relative;
+    z-index: 1002; /* Keeps links or buttons above the pseudo-element */
+    text-decoration: none; /* Optional: remove underline for links */
+}
+
+
+.page-navigation {
+    gap: 0;
+    overflow: hidden;
+    border-radius: 1000px;
+    position: relative;
+    height: var(--wp--custom--spacing--sticky-height);
+    background-color: var(--wp--custom--color--surface--default);
+    max-width: var(--wp--custom--layout--post);
+
+
+}
+
+.page-navigation-container {
+    position: sticky;
+    z-index: 1000;
+    top: 48px;
+    transition: top 0.4s ease-in-out; /* Smooth transition for the top value */
+
+}
+
+
+.page-navigation-block:first-of-type {
+    padding-left: var(--wp--preset--spacing--2-xl);
+    &.active {
+        border-left: none;
+        padding-left: var(--wp--preset--spacing--2-xl);
+    }
+}
+
+.page-navigation-block:last-of-type {
+    padding-right: var(--wp--preset--spacing--2-xl);
+}

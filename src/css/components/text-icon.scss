@@ -1,0 +1,21 @@
+.text-icon {
+    position: relative;
+    padding-left: 40px; /* Adjust the padding as needed */
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 24px; /* Adjust the width and height as needed */
+        height: 24px;
+        background-image: url(/assets/svg/phone.svg); /* Replace with your phone icon image path */
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &.email::before {
+        background-image: url(/assets/svg/email.svg); /* Replace with your email icon image path */
+    }
+}

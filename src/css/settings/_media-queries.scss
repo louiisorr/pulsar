@@ -13,3 +13,4 @@ $breakpoints: (
 	@custom-media --#{$breakpoint-name} (min-width: #{$breakpoint-size});
 	@custom-media --#{$breakpoint-name}-down (max-width: #{$breakpoint-size - 1});
 }
+

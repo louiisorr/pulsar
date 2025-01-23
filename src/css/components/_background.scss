@@ -1,0 +1,13 @@
+@use "tools" as *;
+
+.background {
+    background-color: var(--wp--custom--color--primary--500);
+    height: 100vh;
+    margin-block-start: 0 !important;
+}
+
+.motif {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

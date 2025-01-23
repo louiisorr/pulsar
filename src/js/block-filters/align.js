@@ -65,6 +65,7 @@ const setDefaultBlockAlign = (settings, name) => {
 			settings = updateVariationAlign(settings, 'group', 'full');
 			settings = updateVariationAlign(settings, 'group-row', 'wide');
 			settings = updateVariationAlign(settings, 'group-grid', 'wide');
+			settings = updateVariationAlign(settings, 'group', 'post');
 
 			return settings;
 	}
@@ -77,3 +78,5 @@ addFilter(
 	'pulsar/set-default-align',
 	setDefaultBlockAlign
 );
+
+

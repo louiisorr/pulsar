@@ -1,0 +1,25 @@
+@use "tools" as *;
+
+.action-block {
+ margin-block-start: var(--wp--custom--spacing--group-gap);
+   
+}
+
+.action-block p {
+    font-size: var(--wp--preset--font-size--2-xl);
+    line-height: var(--wp--custom--line-height--snug);
+	font-weight: 500;
+    margin-block-start: var(--wp--preset--spacing--xs);
+}
+
+.action-block h2 {
+    font-size: var(--wp--preset--font-size--9-xl);
+}
+
+.action-block a:hover {
+    color: var(--wp--custom--color--text--link-hover);
+}
+
+.action-block a {
+    transition: color 0.4s ease-out;
+}

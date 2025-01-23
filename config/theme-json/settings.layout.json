@@ -3,10 +3,11 @@
 	"version": 3,
 	"settings": {
 		"layout": {
-      "allowCustomContentAndWideSize": false,
+      "allowCustomContentAndWideSize": true,
       "allowEditing": true,
 			"contentSize": "var:custom|layout|content",
-    "wideSize": "var:custom|layout|wide"
+    "wideSize": "var:custom|layout|wide",
+	"postSize": "var:custom|layout|post"
 		}
 	}
 }

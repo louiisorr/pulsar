@@ -1,0 +1,6 @@
+@use "tools" as *;
+
+.image-gallery .wp-block-image {
+    border-radius: var(--wp--custom--border-radius--sm);
+    overflow: hidden;
+}

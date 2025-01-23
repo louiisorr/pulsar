@@ -10,9 +10,10 @@
 	display: inline-flex;
 	gap: var(--wp--preset--spacing--2-xs);
 	justify-content: center;
-	padding: var(--wp--preset--spacing--sm);
+	padding: 16px 32px;
 	text-align: center;
 	transition: all var(--wp--custom--transition-duration--quick);
+	font-weight: 500;
 }
 
 /// Button style.
@@ -21,7 +22,7 @@
 ///
 @mixin button-style($style: primary) {
 	@if $style == primary {
-		background-color: var(--wp--custom--color--surface--primary);
+		background-color: var(--wp--custom--color--surface--inbert);
 		color: var(--wp--custom--color--text--invert);
 
 		&:hover,
@@ -30,3 +31,5 @@
 		}
 	}
 }
+
+

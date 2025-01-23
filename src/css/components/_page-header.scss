@@ -1,0 +1,29 @@
+
+@use "tools" as *;
+
+.page-header-row {
+    padding-left: var(--wp--preset--spacing--lg);
+    border-left: 3px solid var(--wp--custom--color--border--primary);
+    margin-block-start: var(--wp--preset--spacing--5-xl);
+}
+
+.page-header {
+    height: 50vh;
+   gap: var(--wp--preset--spacing--3-xl);
+
+}
+
+.page-header p {
+    font-size: var(--wp--preset--font-size--2-xl);
+    line-height: var(--wp--custom--line-height--snug);
+	font-weight: 500;
+}
+
+.page-header em {
+    font-weight: 400;
+}
+
+.block-post-title {
+    display: none;
+}
+
