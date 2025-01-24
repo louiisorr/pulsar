@@ -98,12 +98,12 @@ document.addEventListener("DOMContentLoaded", () => {
         navContainerInner.style.boxShadow = "0px 10px 15px -3px rgba(203, 203, 203, 0.10), 0px 4px 6px -4px rgba(203, 203, 203, 0.10)";
       } else {
         // Scrolling down
-        navContainer.style.top = "48px";
+        navContainer.style.top = "24px";
         navContainerInner.style.boxShadow = "none";
       }
 
     if (window.scrollY < 100) {
-        navContainer.style.top = "48px";
+        navContainer.style.top = "24px";
         navContainerInner.style.boxShadow = "none";
     }
   
