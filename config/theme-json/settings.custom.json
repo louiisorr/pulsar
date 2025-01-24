@@ -110,7 +110,7 @@
 			"spacing": {
 				"StickyHeight": "106px",
 				"blockGap": "var:preset|spacing|xl",
-				"groupGap": "var:preset|spacing|9-xl",
+				"groupGap": "clamp(var(--wp--preset--spacing--6-xl), 5.3333px + 5.8333vw, var(--wp--preset--spacing--9-xl))",
         "rowGap": "var:preset|spacing|2-xl",
         "columnGap": "var:preset|spacing|6-xl",
 				"edge": "clamp(var(--wp--preset--spacing--xl), 5.3333px + 5.8333vw, var(--wp--preset--spacing--4-xl))"

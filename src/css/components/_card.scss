@@ -49,7 +49,9 @@
 .gallery-card {
     border-radius: var(--wp--custom--border-radius--sm);
     overflow: hidden;
-    aspect-ratio: 20 / 9;
+    @media screen and (min-width: 680px) {
+        aspect-ratio: 20 / 9;
+    }
 }
 
 // Card Heading Hover behaviour //
@@ -93,4 +95,13 @@
   gap: var(--wp--preset--spacing--3-xl);
 
  }
+}
+@media screen and (max-width: 680px) {
+    .wp-block-query:has(.home-grid) {
+            margin-block-start: var(--wp--preset--spacing--6-xl);
+        }
+
+    .home-grid { 
+        margin-block-start: 0;
+}
 }

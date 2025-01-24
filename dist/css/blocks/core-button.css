@@ -128,6 +128,7 @@
   .wp-block-buttons.is-content-justification-right {
     justify-content: center !important;
     gap: var(--wp--preset--spacing--md);
+    margin-block-start: var(--wp--preset--spacing--4-xl);
   }
   .mobile-full {
     width: 100% !important;

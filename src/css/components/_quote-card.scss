@@ -39,4 +39,11 @@
     margin-block-end: var(--wp--preset--spacing--6-xl);
     max-width: var(--wp--custom--layout--post);
     align-items: start;
+    
+    @media screen and (max-width: 680px) {
+        flex-direction: column;
+        margin-block-start: var(--wp--preset--spacing--2-xl);
+        margin-block-end: var(--wp--preset--spacing--2-xl);
+        
+    }
 }

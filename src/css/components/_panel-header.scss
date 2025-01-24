@@ -5,12 +5,20 @@
     margin-block-start: var(--wp--preset--spacing--xs);
     align-items: flex-start;
     gap: var(--wp--preset--spacing--3-xl);
+    
+    @media screen and (max-width: 680px) {
+        flex-direction: column;
+        gap: var(--wp--preset--spacing--xl);
+
+    }
+
 
 }
 
 
 
 .panel-header { 
+    @media screen and (min-width: 680px) {        
     padding: var(--wp--preset--spacing--2-xl);
     padding-right: var(--wp--preset--spacing--5-xl);
     background-color: var(--wp--custom--color--surface--default);
@@ -20,10 +28,15 @@
     bottom: -15%; /* Move the block halfway out of the image */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjusts the left alignment */
-    width: 100%;
-    max-width: var(--wp--custom--layout--post);
+    width: calc(100% - var(--wp--custom--spacing--edge));
+    max-width: var(--wp--custom--layout--wide);
     box-sizing: border-box;
+    }
 
+    @media screen and (max-width: 680px) {
+        margin-block-start: var(--wp--preset--spacing--3-xl); 
+        position: relative;
+    }
 }
 
 .panel-header-inner h1 {
@@ -44,13 +57,22 @@ line-height: var(--wp--custom--line-height--none);
     position: relative; /* Enables absolute positioning for child elements */
     display: inline-block;
     width: 100%; /* Adjust as needed */
+
 }
 
 .panel-header-image {
+    @media screen and (min-width: 680px) {
     height: 60vh;
     overflow: hidden;
+    }
 }
 
 spacer {
     height: var(--wp--custom--spacing--row-gap);
+}
+
+.panel-header .wp-block-list {
+    @media screen and (max-width: 680px) {
+    margin-block-start: 0
+    }
 }

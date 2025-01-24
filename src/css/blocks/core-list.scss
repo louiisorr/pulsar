@@ -65,3 +65,17 @@
 	font-weight: 600; /* Change the weight of the numbers */
 	color: var(--wp--custom--color--text--primary); /* Optional: Change the color of the numbers */
   }
+
+
+  .wp-block-list:where(ol) li {
+	@media screen and (max-width: 680px) {
+    margin-top: var(--wp--preset--spacing--xl);
+
+}
+  }
+
+  .number-columns {
+	@media screen and (max-width: 680px) {
+     gap: 0 !important;
+	}
+}

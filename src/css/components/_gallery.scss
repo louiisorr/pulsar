@@ -4,3 +4,19 @@
     border-radius: var(--wp--custom--border-radius--sm);
     overflow: hidden;
 }
+
+@media screen and (max-width: 680px) {
+.wp-block-columns:has(.image-gallery) {
+        margin-block-start: var(--wp--custom--spacing--group-gap);
+    }
+
+.wp-block-column:has(.image-gallery):last-child {
+    display: none;
+}
+}
+
+
+.wp-container-core-columns-is-layout-1:has(.image-gallery) {
+    gap: var(--wp--preset--spacing--sm);
+}
+

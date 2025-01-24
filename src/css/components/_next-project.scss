@@ -5,8 +5,20 @@
     background-color: var(--wp--custom--color--surface--primary-accent);
     cursor: pointer; /* Keeps the cursor pointer for interactivity */
     transition: background-color 0.4s ease-in-out; /* Smoothens the hover effect */
-    margin-block-end: var(--wp--custom--spacing--group-gap) !important;
     max-width: var(--wp--custom--layout--post);
+
+    @media screen and (max-width: 680px) {
+        padding: var(--wp--preset--spacing--xl);
+        flex-direction: column-reverse;
+        
+    }
+}
+
+.next-project .wp-block-buttons {
+    @media screen and (max-width: 680px) {
+
+    display: none;
+    }
 }
 
 .next-project::after {

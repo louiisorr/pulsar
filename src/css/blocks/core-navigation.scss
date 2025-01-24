@@ -33,10 +33,10 @@ $responsive-breakpoint: --lg;
 	--navigation-height: 100dvh;
 
 	// A default gap between menu items
-	--navigation-gap: var(--wp--preset--spacing--md);
+	--navigation-gap: var(--wp--preset--spacing--2-xl);
 
 	// A default gap between an icon
-	--navigation-item-gap: var(--wp--preset--spacing--2-xs);
+	--navigation-item-gap: var(--wp--preset--spacing--2-xl);
 
 	// Set a consistent size for icons.
 	--navigation-icon-size: 10px;

@@ -1,10 +1,12 @@
 @use "tools" as *;
 
 .box {
+    @media screen and (min-width: 680px) {
     background-color: var(--wp--custom--color--surface--accent);
     padding: var(--wp--preset--spacing--xl);
     border-radius: var(--wp--custom--border-radius--md);
     box-sizing: border-box;
     max-width: var(--wp--custom--layout--content);
+}
     
 }

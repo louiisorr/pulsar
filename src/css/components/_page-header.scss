@@ -10,8 +10,15 @@
 .page-header {
     height: 50vh;
    gap: var(--wp--preset--spacing--3-xl);
+   @media screen and (max-width: 680px) {
+       margin-block-start: var(--wp--custom--spacing--group-gap) !important;
+       height: auto;
+    
+   }
 
 }
+
+
 
 .page-header p {
     font-size: var(--wp--preset--font-size--2-xl);

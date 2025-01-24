@@ -74,4 +74,15 @@
   color: var(--wp--custom--color--text--primary); /* Optional: Change the color of the numbers */
 }
 
+@media screen and (max-width: 680px) {
+  .wp-block-list:where(ol) li {
+    margin-top: var(--wp--preset--spacing--xl);
+  }
+}
+@media screen and (max-width: 680px) {
+  .number-columns {
+    gap: 0 !important;
+  }
+}
+
 /*# sourceMappingURL=core-list.css.map*/

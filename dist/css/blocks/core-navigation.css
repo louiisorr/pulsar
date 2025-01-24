@@ -12,8 +12,8 @@
   --navigation-layout-justify: flex-start;
   --navigation-layout-align: center;
   --navigation-height: 100dvh;
-  --navigation-gap: var(--wp--preset--spacing--md);
-  --navigation-item-gap: var(--wp--preset--spacing--2-xs);
+  --navigation-gap: var(--wp--preset--spacing--2-xl);
+  --navigation-item-gap: var(--wp--preset--spacing--2-xl);
   --navigation-icon-size: 10px;
   --navigation-submenu-width: 200px;
   gap: var(--navigation-gap);
