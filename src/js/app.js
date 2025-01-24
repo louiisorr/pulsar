@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const percentageVisible = visibleHeight / sectionHeight;
       const percentageOfViewport = visibleHeight / viewportHeight;
 
-      if (percentageVisible >= 0.5 || percentageOfViewport >= 0.3) {
+      if (percentageVisible >= 0.3 || percentageOfViewport >= 0.1) {
         const sectionId = entry.target.getAttribute("id");
 
         // Update active state for the currently visible section
