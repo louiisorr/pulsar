@@ -20,7 +20,7 @@
               "fontDisplay": "swap",
 		          "fontStretch": "normal",
               "src": [
-                "https://fonts.cdnfonts.com/css/general-sans"
+                "url(https://fonts.cdnfonts.com/css/general-sans)"
               ]
             }
           ]
