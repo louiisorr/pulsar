@@ -30,29 +30,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const navBlocks = document.querySelectorAll(".page-navigation-block"); // All navigation blocks
   const pageNavigation = document.querySelector(".page-navigation"); // The navigation container
 
-  // Calculate a dynamic threshold based on section height and viewport height
-  const observerOptions = {
-    root: null, // Viewport as the root
-    threshold: Array.from({ length: 101 }, (_, i) => i / 100), // Fine-grained thresholds
-  };
-
   let activeSectionId = null; // Track the currently active section
 
+  // Observer options with no static threshold
+  const observerOptions = {
+    root: null, // Viewport as the root
+    threshold: 0, // Trigger as soon as the section enters the viewport
+  };
+
   const observer = new IntersectionObserver((entries) => {
+    // Calculate the section closest to the center of the viewport
+    let closestEntry = null;
+    let minDistance = Infinity;
+
     entries.forEach((entry) => {
-      // Check if a sufficient percentage of the section is in the viewport
-      const sectionHeight = entry.target.offsetHeight;
-      const visibleHeight = entry.intersectionRect.height;
-      const viewportHeight = window.innerHeight;
+      if (entry.isIntersecting) {
+        const boundingRect = entry.target.getBoundingClientRect();
+        const sectionCenter = boundingRect.top + boundingRect.height / 2;
+        const viewportCenter = window.innerHeight / 2;
 
-      // Set a custom percentage to trigger the active state (e.g., 50% of the section visible or occupies 30% of the viewport)
-      const percentageVisible = visibleHeight / sectionHeight;
-      const percentageOfViewport = visibleHeight / viewportHeight;
+        const distanceToCenter = Math.abs(sectionCenter - viewportCenter);
 
-      if (percentageVisible >= 0.3 || percentageOfViewport >= 0.1) {
-        const sectionId = entry.target.getAttribute("id");
+        if (distanceToCenter < minDistance) {
+          minDistance = distanceToCenter;
+          closestEntry = entry;
+        }
+      }
+    });
 
-        // Update active state for the currently visible section
+    if (closestEntry) {
+      const sectionId = closestEntry.target.getAttribute("id");
+
+      // Update active state for the closest section
+      if (sectionId !== activeSectionId) {
         activeSectionId = sectionId;
         navBlocks.forEach((block) => block.classList.remove("active"));
         const targetBlock = document.querySelector(
@@ -60,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         )?.closest(".page-navigation-block");
         if (targetBlock) targetBlock.classList.add("active");
       }
-    });
+    }
   }, observerOptions);
 
   // Observe each section
@@ -85,6 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
 
   
   
