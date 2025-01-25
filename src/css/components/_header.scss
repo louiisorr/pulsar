@@ -70,7 +70,7 @@
 	left: 0;
 	height: 2px; /* Thickness of the line */
 	width: 0; /* Start with no width */
-	background-color: var(--wp--custom--color--text-primary); /* Adjust the line color */
+	background-color: var(--wp--custom--color--text--primary); /* Adjust the line color */
 	transition: width 0.3s ease; /* Smooth scaling animation */
   }
   
@@ -82,6 +82,8 @@
   
   .wp-block-navigation-item__label.current-menu-item::after {
 	width: 100%; /* Fix the line to the full width */
+	background-color: var(--wp--custom--color--surface--primary);
+
   }
 
 
