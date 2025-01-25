@@ -1624,7 +1624,7 @@ spacer {
 @media screen and (max-width: 1500px) {
   .forminator-input {
     font-size: var(--wp--custom--font-size--lg);
-    height: 55px;
+    height: 60px;
   }
 }
 .forminator-input::placeholder,
@@ -1648,6 +1648,11 @@ spacer {
   border-radius: var(--wp--custom--border-radius--xs);
 }
 
+@media screen and (max-width: 1500px) {
+  .forminator-textarea {
+    min-height: 100px;
+  }
+}
 .form-box {
   padding: var(--wp--preset--spacing--3-xl);
   background-color: var(--wp--custom--color--surface--default);

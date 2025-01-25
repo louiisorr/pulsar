@@ -12,7 +12,7 @@
    font-weight: 500;
    @media screen and (max-width: 1500px) {
     font-size: var(--wp--custom--font-size--lg);
-    height: 55px;
+    height: 60px;
     
 }
 }
@@ -36,6 +36,11 @@
     line-height: var(--wp--custom--line-height--normal);
     font-weight: 500;
     border-radius: var(--wp--custom--border-radius--xs);;
+    @media screen and (max-width: 1500px) {
+        min-height: 100px;
+ 
+        
+    }
 }
 
 
