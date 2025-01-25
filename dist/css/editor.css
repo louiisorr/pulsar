@@ -1053,7 +1053,7 @@ svg {
 }
 @media screen and (max-width: 680px) {
   .hero {
-    margin-block-start: calc(var(--wp--custom--spacing--group-gap)) !important;
+    margin-block-start: var(--wp--custom--spacing--group-gap) !important;
     height: auto;
   }
 }
