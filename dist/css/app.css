@@ -1561,7 +1561,7 @@ spacer {
 
 .page-navigation-container {
   position: sticky;
-  margin-block-start: calc(var(--wp--custom--spacing--group-gap) * 1.2);
+  margin-block-start: calc(var(--wp--custom--spacing--group-gap) * 1.4);
   z-index: 1000;
   top: 24px;
   transition: top 0.4s ease-in-out; /* Smooth transition for the top value */
