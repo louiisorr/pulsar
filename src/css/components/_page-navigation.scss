@@ -14,7 +14,7 @@
     color: var(--wp--custom--color--text--primary);
     font-size: var(--wp--preset--font-size--lg);
     cursor: pointer; /* Keeps the cursor pointer for interactivity */
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1500px) {
         font-size: var(--wp--preset--font-size--md);
         
     }

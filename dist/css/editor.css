@@ -1495,7 +1495,7 @@ spacer {
   cursor: pointer; /* Keeps the cursor pointer for interactivity */
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1500px) {
   .page-navigation-block {
     font-size: var(--wp--preset--font-size--md);
   }
