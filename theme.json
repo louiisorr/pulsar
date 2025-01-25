@@ -227,7 +227,7 @@
 				},
 				"border": {
 					"default": "var:custom|color|neutral|100",
-					"input": "var:custom|color|neutral|50",
+					"input": "var:custom|color|neutral|100",
 					"primary": "var:custom|color|primary|600",
 					"invert": "var:custom|color|neutral|0",
 					"active": "var:custom|color|primary|600",

@@ -1698,7 +1698,7 @@ spacer {
 }
 
 .forminator-row {
-  margin-bottom: var(--wp--preset--spacing--sm) !important;
+  margin-bottom: var(--wp--preset--spacing--md) !important;
 }
 
 .send-form {
