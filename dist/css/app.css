@@ -1623,6 +1623,7 @@ spacer {
   letter-spacing: var(--wp--custom--letter-spacing--tight);
   line-height: var(--wp--custom--line-height--normal);
   font-weight: 500;
+  background-color: var(--wp--custom--color--surface--accent);
 }
 
 @media screen and (max-width: 1500px) {
@@ -1648,6 +1649,7 @@ spacer {
   font-size: var(--wp--custom--font-size--2-xl);
   letter-spacing: var(--wp--custom--letter-spacing--tight);
   line-height: var(--wp--custom--line-height--normal);
+  background-color: var(--wp--custom--color--surface--accent);
   font-weight: 500;
   border-radius: var(--wp--custom--border-radius--xs);
 }
