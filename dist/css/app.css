@@ -978,13 +978,13 @@ svg {
 }
 
 .hero {
-  height: 67vh;
-  margin-top: var(--wp--preset--spacing--4-xl);
+  margin-block-start: calc(var(--wp--custom--spacing--group-gap) * 2) !important;
+  margin-block-end: calc(var(--wp--custom--spacing--group-gap) * 2) !important;
 }
 
 @media screen and (max-width: 680px) {
   .hero {
-    margin-block-start: var(--wp--custom--spacing--group-gap) !important;
+    margin-block-start: calc(var(--wp--custom--spacing--group-gap) 2) !important;
     height: auto;
   }
 }
