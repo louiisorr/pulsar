@@ -37,7 +37,7 @@
     font-weight: 500;
     border-radius: var(--wp--custom--border-radius--xs);;
     @media screen and (max-width: 1500px) {
-        min-height: 100px;
+        min-height: 100px !important;
  
         
     }

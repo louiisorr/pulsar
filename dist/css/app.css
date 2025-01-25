@@ -1654,7 +1654,7 @@ spacer {
 
 @media screen and (max-width: 1500px) {
   .forminator-textarea {
-    min-height: 100px;
+    min-height: 100px !important;
   }
 }
 .form-box {
