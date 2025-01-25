@@ -1657,58 +1657,13 @@ spacer {
     min-height: 100px !important;
   }
 }
-.form-box {
-  padding: var(--wp--preset--spacing--3-xl);
-  background-color: var(--wp--custom--color--surface--default);
-}
-
-@media screen and (max-width: 1500px) {
-  .form-box {
-    padding: var(--wp--preset--spacing--2-xl);
-  }
-}
 .accent {
   background-color: var(--wp--custom--color--surface--accent);
 }
 
 .contact-container {
-  border-radius: var(--wp--custom--border-radius--lg);
-  max-width: var(--wp--custom--layout--wide);
-  width: 100%; /* Allow responsiveness */
-  overflow: hidden;
-  box-sizing: border-box; /* Prevent padding from affecting width */
-  margin-block: auto; /* Auto vertical margins for centering */
-  z-index: 2;
-}
-
-.contact-container::before {
-  content: "";
-  position: absolute;
-  top: 10vh;
-  right: -410px;
-  transform: translateY(-50%);
-  width: 1200px;
-  height: 1200px;
-  background-image: url(../../assets/svg/vector.svg); /* Replace with your phone icon image path */
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-  opacity: 0.5;
-}
-
-.contact-container::after {
-  content: "";
-  position: absolute;
-  bottom: -70vh;
-  left: -410px;
-  transform: translateY(-50%);
-  width: 1200px;
-  height: 1200px;
-  background-image: url(../../assets/svg/vector.svg); /* Replace with your phone icon image path */
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -2;
-  opacity: 0.5;
+  margin-block-start: calc(var(--wp--custom--spacing--group-gap) * 2);
+  margin-block-end: calc(var(--wp--custom--spacing--group-gap) * 2);
 }
 
 .contact-holder {
