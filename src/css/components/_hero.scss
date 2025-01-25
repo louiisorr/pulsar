@@ -18,10 +18,16 @@
     }
     
     @media screen and (max-width: 680px) {
-       margin-block-start: calc(var(--wp--custom--spacing--group-gap) 2) !important;
+       margin-block-start: calc(var(--wp--custom--spacing--group-gap)) !important;
        height: auto;
     }
+}
 
+.hero em {
+    @media screen and (max-width: 680px) {
+        display: none;
+        
+    }
 }
 
 .hero p {

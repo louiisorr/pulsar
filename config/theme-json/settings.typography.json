@@ -71,7 +71,7 @@
 					"slug": "2-xl",
 					"size": "24px",
 					"fluid": {
-						"min": "22px",
+						"min": "20px",
 						"max": "24px"
 					}
 				},
