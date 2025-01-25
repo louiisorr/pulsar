@@ -63,6 +63,10 @@
 }
 
 
+.wp-block-navigation-item__label {
+	position: relative;
+}
+
 .wp-block-navigation-item__label::after {
 	content: '';
 	position: absolute;
