@@ -1647,6 +1647,11 @@ spacer {
   background-color: var(--wp--custom--color--surface--default);
 }
 
+@media screen and (max-width: 1500px) {
+  .form-box {
+    padding: var(--wp--preset--spacing--2-xl);
+  }
+}
 .accent {
   background-color: var(--wp--custom--color--surface--accent);
 }
