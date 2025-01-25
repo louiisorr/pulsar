@@ -1166,7 +1166,7 @@ svg {
     bottom: -15%; /* Move the block halfway out of the image */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjusts the left alignment */
-    width: calc(100% - var(--wp--custom--spacing--edge));
+    width: calc(100% - var(--wp--custom--spacing--edge) * 2);
     max-width: var(--wp--custom--layout--wide);
     box-sizing: border-box;
   }
@@ -1197,7 +1197,7 @@ svg {
 
 @media screen and (min-width: 680px) {
   .panel-header-image {
-    height: 60vh;
+    height: 56.25vw;
     overflow: hidden;
   }
 }

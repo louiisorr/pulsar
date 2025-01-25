@@ -28,7 +28,7 @@
     bottom: -15%; /* Move the block halfway out of the image */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjusts the left alignment */
-    width: calc(100% - var(--wp--custom--spacing--edge));
+    width: calc(100% - calc(var(--wp--custom--spacing--edge)*2));
     max-width: var(--wp--custom--layout--wide);
     box-sizing: border-box;
     }
@@ -62,7 +62,7 @@ line-height: var(--wp--custom--line-height--none);
 
 .panel-header-image {
     @media screen and (min-width: 680px) {
-    height: 60vh;
+    height: calc(100vw * 9 / 16);
     overflow: hidden;
     }
 }
