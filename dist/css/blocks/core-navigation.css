@@ -12,8 +12,8 @@
   --navigation-layout-justify: flex-start;
   --navigation-layout-align: center;
   --navigation-height: 100dvh;
-  --navigation-gap: var(--wp--preset--spacing--2-xl);
-  --navigation-item-gap: var(--wp--preset--spacing--2-xl);
+  --navigation-gap: var(--wp--preset--spacing--md);
+  --navigation-item-gap: var(--wp--preset--spacing--2-xs);
   --navigation-icon-size: 10px;
   --navigation-submenu-width: 200px;
   gap: var(--navigation-gap);
@@ -203,7 +203,7 @@
   cursor: pointer;
   display: flex;
   font-family: inherit;
-  font-size: inherit;
+  font-size: var(--wp--preset--font-size-2-xl);
   font-weight: inherit;
   gap: inherit;
   justify-content: center;
@@ -363,7 +363,7 @@
 
 .wp-block-navigation:where(.is-responsive) .wp-block-navigation-submenu__label {
   flex: 0 0 auto;
-  font-size: inherit;
+  font-size: var(--wp--preset--font-size-2-xl);
 }
 
 .wp-block-navigation:where(.is-responsive) .wp-block-navigation-submenu__all {
@@ -374,7 +374,7 @@
   cursor: pointer;
   display: flex;
   flex: 0 0 auto;
-  font-size: inherit;
+  font-size: var(--wp--preset--font-size-2-xl);
   gap: var(--navigation-item-gap);
   margin-left: auto;
   padding: 0;

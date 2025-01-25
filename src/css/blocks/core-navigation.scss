@@ -33,10 +33,10 @@ $responsive-breakpoint: --lg;
 	--navigation-height: 100dvh;
 
 	// A default gap between menu items
-	--navigation-gap: var(--wp--preset--spacing--2-xl);
+	--navigation-gap: var(--wp--preset--spacing--md);
 
 	// A default gap between an icon
-	--navigation-item-gap: var(--wp--preset--spacing--2-xl);
+	--navigation-item-gap: var(--wp--preset--spacing--2-xs);
 
 	// Set a consistent size for icons.
 	--navigation-icon-size: 10px;
@@ -283,6 +283,7 @@ $responsive-breakpoint: --lg;
 ///
 .wp-block-navigation:where(.is-responsive) {
 
+
 	// The navigation toggle button directly in the <nav> element
 	.wp-block-navigation__responsive-container-open {
 		align-items: center;
@@ -291,7 +292,7 @@ $responsive-breakpoint: --lg;
 		cursor: pointer;
 		display: flex;
 		font-family: inherit;
-		font-size: inherit;
+		font-size: var(--wp--preset--font-size-2-xl);
 		font-weight: inherit;
 		gap: inherit; // Pass the gap to the children so the CMS block spacing is respected
 		justify-content: center;
@@ -439,11 +440,6 @@ $responsive-breakpoint: --lg;
 		column-gap: var(--navigation-item-gap);
 	}
 
-	// inserting styling //
-
-  
-
-
 	.wp-block-navigation-submenu__header {
 		display: flex;
 		flex-wrap: nowrap;
@@ -472,7 +468,7 @@ $responsive-breakpoint: --lg;
 
 	.wp-block-navigation-submenu__label {
 		flex: 0 0 auto;
-		font-size: inherit;
+		font-size: var(--wp--preset--font-size-2-xl);
 	}
 
 	.wp-block-navigation-submenu__all {
@@ -483,7 +479,7 @@ $responsive-breakpoint: --lg;
 		cursor: pointer;
 		display: flex;
 		flex: 0 0 auto;
-		font-size: inherit;
+		font-size: var(--wp--preset--font-size-2-xl);
 		gap: var(--navigation-item-gap);
 		margin-left: auto;
 		padding: 0;
