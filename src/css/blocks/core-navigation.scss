@@ -439,6 +439,36 @@ $responsive-breakpoint: --lg;
 		column-gap: var(--navigation-item-gap);
 	}
 
+	// inserting styling //
+
+  
+  .wp-block-navigation-item::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px; /* Thickness of the line */
+	width: 0; /* Start with no width */
+	background-color: var(--wp--custom--color--text-primary); /* Adjust the line color */
+	transition: width 0.3s ease; /* Smooth scaling animation */
+  }
+  
+  /* Hover effect to scale the line */
+  .wp-block-navigation-item:hover::after {
+	width: 100%; /* Line grows to the full width of the text */
+  }
+  
+  
+  .wp-block-navigation-item.current-menu-item::after {
+	width: 100%; /* Fix the line to the full width */
+  }
+
+
+	// end of styling insert //
+
+
+
+
 	.wp-block-navigation-submenu__header {
 		display: flex;
 		flex-wrap: nowrap;

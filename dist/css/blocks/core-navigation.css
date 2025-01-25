@@ -196,6 +196,10 @@
     display: none;
   }
 }
+.wp-block-navigation:where(.is-responsive) {
+  /* Hover effect to scale the line */
+}
+
 .wp-block-navigation:where(.is-responsive) .wp-block-navigation__responsive-container-open {
   align-items: center;
   background-color: transparent;
@@ -333,6 +337,25 @@
 
 .wp-block-navigation:where(.is-responsive) .wp-block-navigation-item {
   column-gap: var(--navigation-item-gap);
+}
+
+.wp-block-navigation:where(.is-responsive) .wp-block-navigation-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px; /* Thickness of the line */
+  width: 0; /* Start with no width */
+  background-color: var(--wp--custom--color--text-primary); /* Adjust the line color */
+  transition: width 0.3s ease; /* Smooth scaling animation */
+}
+
+.wp-block-navigation:where(.is-responsive) .wp-block-navigation-item:hover::after {
+  width: 100%; /* Line grows to the full width of the text */
+}
+
+.wp-block-navigation:where(.is-responsive) .wp-block-navigation-item.current-menu-item::after {
+  width: 100%; /* Fix the line to the full width */
 }
 
 .wp-block-navigation:where(.is-responsive) .wp-block-navigation-submenu__header {
