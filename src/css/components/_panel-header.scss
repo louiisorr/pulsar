@@ -53,12 +53,14 @@ line-height: var(--wp--custom--line-height--none);
 
 }
 
-.panel-header-container {
-    position: relative; /* Enables absolute positioning for child elements */
-    display: inline-block;
-    width: 100%; /* Adjust as needed */
 
-}
+    .panel-header-container {
+        position: relative; /* Enables absolute positioning for child elements */
+        display: inline-block;
+        width: 100%; /* Adjust as needed */
+    }
+
+
 
 .panel-header-image {
     @media screen and (min-width: 680px) {
