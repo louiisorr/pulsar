@@ -1526,6 +1526,11 @@ spacer {
   background-color: var(--wp--custom--color--surface--primary-active);
 }
 
+@media screen and (max-width: 1500px) {
+  .page-navigation-block.active {
+    padding-left: calc(var(--wp--preset--spacing--md) - 4px);
+  }
+}
 .page-navigation-block::after {
   content: "";
   position: absolute;

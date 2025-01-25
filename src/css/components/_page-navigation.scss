@@ -41,6 +41,10 @@
     border-left: 4px solid var(--wp--custom--color--border--active);
     padding-left: calc(var(--wp--preset--spacing--lg) - 4px);
     background-color: var(--wp--custom--color--surface--primary-active); 
+    @media screen and (max-width: 1500px) {
+        padding-left: calc(var(--wp--preset--spacing--md) - 4px);
+        
+    }
 
 }
 
