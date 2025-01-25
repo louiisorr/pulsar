@@ -1489,6 +1489,7 @@ spacer {
   padding-right: var(--wp--preset--spacing--lg);
   height: 100%;
   font-weight: 500;
+  line-height: var(--wp--custom--line-height--tight);
   color: var(--wp--custom--color--text--primary);
   font-size: var(--wp--preset--font-size--lg);
   cursor: pointer; /* Keeps the cursor pointer for interactivity */
