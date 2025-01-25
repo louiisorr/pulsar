@@ -108,7 +108,7 @@
 				"post": "1440px"
 			},
 			"spacing": {
-				"StickyHeight": "clamp(90px, 2px + 4vw, 40px)",
+				"StickyHeight": "clamp(90px, 2px + 6vw, 40px)",
 				"blockGap": "var:preset|spacing|xl",
 				"groupGap": "clamp(var(--wp--preset--spacing--6-xl), 5.3333px + 5.8333vw, var(--wp--preset--spacing--9-xl))",
         "rowGap": "var:preset|spacing|2-xl",
