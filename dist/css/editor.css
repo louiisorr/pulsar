@@ -985,7 +985,7 @@ svg {
   }
 }
 .hero p {
-  font-size: var(--wp--preset--font-size--3-xl);
+  font-size: var(--wp--preset--font-size--2-xl);
   line-height: var(--wp--custom--line-height--snug);
   font-weight: 500;
 }
@@ -1088,7 +1088,7 @@ svg {
 
 .action-block p {
   font-size: var(--wp--preset--font-size--2-xl);
-  line-height: var(--wp--custom--line-height--snug);
+  line-height: var(--wp--custom--line-height--tight);
   font-weight: 500;
   margin-block-start: var(--wp--preset--spacing--xs);
 }
