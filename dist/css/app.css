@@ -1502,6 +1502,8 @@ spacer {
 @media screen and (max-width: 1500px) {
   .page-navigation-block {
     font-size: var(--wp--preset--font-size--md);
+    padding-left: var(--wp--preset--spacing--md);
+    padding-right: var(--wp--preset--spacing--md);
   }
 }
 .page-navigation-block a {

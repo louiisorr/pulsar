@@ -16,6 +16,8 @@
     cursor: pointer; /* Keeps the cursor pointer for interactivity */
     @media screen and (max-width: 1500px) {
         font-size: var(--wp--preset--font-size--md);
+        padding-left: var(--wp--preset--spacing--md);
+        padding-right: var(--wp--preset--spacing--md);
         
     }
 
