@@ -63,7 +63,7 @@
 }
 
 
-.wp-block-navigation-item::after {
+.wp-block-navigation-item__label::after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -75,12 +75,12 @@
   }
   
   /* Hover effect to scale the line */
-  .wp-block-navigation-item:hover::after {
+  .wp-block-navigation-item__label:hover::after {
 	width: 100%; /* Line grows to the full width of the text */
   }
   
   
-  .wp-block-navigation-item.current-menu-item::after {
+  .wp-block-navigation-item__label.current-menu-item::after {
 	width: 100%; /* Fix the line to the full width */
   }
 
