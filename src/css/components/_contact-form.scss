@@ -10,6 +10,11 @@
    letter-spacing: var(--wp--custom--letter-spacing--tight);
    line-height: var(--wp--custom--line-height--normal);
    font-weight: 500;
+   @media screen and (max-width: 1500px) {
+    font-size: var(--wp--custom--font-size--lg);
+    height: 55px;
+    
+}
 }
 
 .forminator-input::placeholder,

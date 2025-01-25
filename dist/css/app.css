@@ -1625,6 +1625,12 @@ spacer {
   font-weight: 500;
 }
 
+@media screen and (max-width: 1500px) {
+  .forminator-input {
+    font-size: var(--wp--custom--font-size--lg);
+    height: 55px;
+  }
+}
 .forminator-input::placeholder,
 .forminator-textarea::placeholder {
   color: var(--wp--custom--color--text--inactive);
