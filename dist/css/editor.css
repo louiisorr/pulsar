@@ -967,12 +967,13 @@ svg {
   border-color: var(--wp--custom--color--text--invert);
 }
 
-.herorow {
-  padding-left: var(--wp--preset--spacing--lg);
-  border-left: 3px solid var(--wp--custom--color--border--primary);
-  margin-top: var(--wp--preset--spacing--4-xl);
+@media screen and (min-width: 680px) {
+  .herorow {
+    padding-left: var(--wp--preset--spacing--xl);
+    border-left: 3px solid var(--wp--custom--color--border--primary);
+    margin-top: var(--wp--preset--spacing--4-xl);
+  }
 }
-
 .hero {
   margin-block-start: calc(var(--wp--custom--spacing--group-gap) * 2) !important;
   margin-block-end: calc(var(--wp--custom--spacing--group-gap) * 2) !important;
