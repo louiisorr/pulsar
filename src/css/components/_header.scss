@@ -70,12 +70,12 @@
 .wp-block-navigation-item__label::after {
 	content: '';
 	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 2px; /* Thickness of the line */
-	width: 0; /* Start with no width */
+    bottom: -6px;
+    left: 0;
+    height: 3px;
+    border-radius: 1000px;
 	background-color: var(--wp--custom--color--text--primary); /* Adjust the line color */
-	transition: width 0.3s ease; /* Smooth scaling animation */
+	transition: width 0.3s ease-out; /* Smooth scaling animation */
   }
   
   /* Hover effect to scale the line */
@@ -84,7 +84,7 @@
   }
   
   
-  .wp-block-navigation-item__label.current-menu-item::after {
+  .current-menu-item.wp-block-navigation-item__label::after {
 	width: 100%; /* Fix the line to the full width */
 	background-color: var(--wp--custom--color--surface--primary);
 
